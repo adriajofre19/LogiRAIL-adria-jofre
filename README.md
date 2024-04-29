@@ -1,5 +1,3 @@
-# Apartamentos para trabajdores de Renfe
+# Repositorio Adrià Jofre Cantón
 
-## Vision de producto
-
-Una aplicación para gestionar apartamentos para los trabajadores de Renfe que necesiten una estancia durante su tiempo de trabajo.
+En esto repositorio subiremos todos los ejercicios y actividades que realizaermos durante los casi dos meses de formación de Q&A Testing de LogiRAIL
