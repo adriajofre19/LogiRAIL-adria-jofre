@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\L41652210S\Documents\GildedRose-Refactoring-Kata-main\Java\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+865386814.index
+1041207992.index
+272658723.index
+3982601943.index
+3069549649.index
+3316466471.index

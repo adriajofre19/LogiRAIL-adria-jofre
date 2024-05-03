@@ -1,0 +1,105 @@
+package com.gildedrose;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Nested;
+import org.junit.platform.commons.annotation.Testable;
+
+class CalculadoraTest2 {
+	
+	Calculadora calculadora;
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		calculadora = new Calculadora();
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+	}
+	
+	@org.junit.jupiter.api.Nested
+	@DisplayName("Metodo: Add")
+	class Divide {
+		@org.junit.jupiter.api.Nested
+		class OK {
+			@Test
+			void testDivIntInt() {
+				assertEquals(2, calculadora.div(4, 2));
+			}
+			
+			@Test
+			@DisplayName("Division real")
+			void testDivDoubleDouble() {
+				assertEquals(0.3333, calculadora.div(1.0, 3),4);
+			}
+		}
+		
+		@org.junit.jupiter.api.Nested
+		class KO{
+			@Test
+			@DisplayName("Division por zero")
+			void testDivIntInt() {
+				// assertEquals(0, calculadora.div(1, 0));
+				assertThrows(ArithmeticException.class, () -> calculadora.div(1, 0));
+			}
+			
+			@Test
+			@DisplayName("Division real por zero")
+			void testDivDoubleDouble() {
+				// assertEquals(0.3333, calculadora.div(1.0, 0),4);
+				assertThrows(ArithmeticException.class, () -> calculadora.div(1.0, 0));
+			}
+		}
+	}
+
+	@Test
+	void testAdd() {
+		
+		double result = calculadora.add(1, 1);
+		
+		assertEquals(2, result);	
+	}
+	
+	@Test
+	void testBad() {
+		Calculadora calculadora = new Calculadora();
+		assertEquals(4, calculadora.add(1,3));
+		
+	}
+	
+	
+	
+	@Test
+	void asercionMultiple() {
+		Item item = new Item("Queso", 1, 2);
+		
+		assertNotNull(item);
+		assertAll("Propiedades",
+			() -> assertEquals("Queso", item.getName(), "name"),
+			() -> assertEquals(2, item.getQuality(), "sellIn"),
+			() -> assertEquals(1, item.getSellIn(), "Quality")
+		);
+	}
+
+	/*
+	@Test
+	void testDivIntInt() {
+		fail("Not yet implemented");
+	} */
+
+}
