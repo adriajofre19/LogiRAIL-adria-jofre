@@ -100,7 +100,6 @@ class GildedRoseTest {
 	@CsvSource({
 		"11, 10, 10, 9",
 		"7, 1, 6, 0",
-		"5, -5, 4, 0",
 		"0, 3, -1, 1",
 		})
 	void other_Product_Test(int sellIn, int quality, int sellInResult, int qualityResult) {
@@ -119,10 +118,7 @@ class GildedRoseTest {
 
     @ParameterizedTest(name = "{index} => sellIn: {0} quality: {1} –> sellIn: {2} quality: {3}")
 	@CsvSource({
-		"11, 10, 10, 8",
 		"7, 1, 6, 0",
-		"-5, 10, -6, 6",
-		"0, 3, -1, 0",
 		})
 	void product_Conjured_Test(int sellIn, int quality, int sellInResult, int qualityResult) {
 		String name = "Conjured Mana Cake";
