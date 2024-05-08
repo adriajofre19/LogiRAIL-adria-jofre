@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="Pruebas API E2E" soapui-version="5.7.2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="Calculadora">C:/Users/L41652210S/Documents/Proyecto/LogiRAIL-adria-jofre/SOPAUI/Calculadora-soapui-project.xml</con:project>
+  <con:project name="Web4Testing">C:/Users/L41652210S/Documents/Web4Testing-soapui-project.xml</con:project>
+  <con:collectInfoForSupport>false</con:collectInfoForSupport>
+</con:soapui-workspace>
